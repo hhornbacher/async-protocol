@@ -6,7 +6,7 @@ edition = "2018"
 exclude = [
   "cargo/*",
 ]
-keywords = ["protocol", "tcp", "udp", "connection", "encoding", "async"]
+keywords = ["protocol", "tcp", "udp", "encoding", "async"]
 license = "MIT"
 name = "async-protocol"
 readme = "README.md"

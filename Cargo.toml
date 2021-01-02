@@ -1,0 +1,16 @@
+[package]
+authors = ["Harry Hornbacher <dev@harry-hornbacher.de>"]
+description = "This crate has async implementations of Connection and Transport for the protocol crate"
+documentation = "https://docs.rs/async-protocol"
+edition = "2018"
+keywords = ["protocol", "tcp", "udp", "connection", "encoding", "async"]
+license = "MIT"
+name = "async-protocol"
+readme = "README.md"
+repository = "https://github.com/hhornbacher/async-protocol"
+version = "0.1.0"
+
+[dependencies]
+async-trait = "0.1"
+protocol = "3.1"
+tokio = {version = "1.0", features = ["sync", "io-util"]}

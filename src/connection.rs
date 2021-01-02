@@ -6,6 +6,7 @@ use tokio::io::{split, AsyncRead, AsyncWrite, ReadHalf, WriteHalf};
 
 use super::transport::{Simple, Transport};
 
+/// Attempts to receive a packet.
 async fn receive_packet<P: Parcel, S: AsyncRead + Send + Unpin>(
     transport: &mut Simple,
     stream: &mut S,
@@ -25,6 +26,7 @@ async fn receive_packet<P: Parcel, S: AsyncRead + Send + Unpin>(
     }
 }
 
+/// Sends a packet.
 async fn send_packet<P: Parcel, S: AsyncWrite + Send + Unpin>(
     transport: &mut Simple,
     stream: &mut S,
@@ -92,6 +94,7 @@ where
         self.stream
     }
 
+    /// Split Connection into ReceiverConnection and SendConnection
     pub fn split(self) -> (ReceiveConnection<P, S>, SendConnection<P, S>) {
         let settings = self.settings.clone();
         let (receiver, sender) = split(self.into_inner());

@@ -3,6 +3,9 @@ authors = ["Harry Hornbacher <dev@harry-hornbacher.de>"]
 description = "This crate has async implementations of Connection and Transport for the protocol crate"
 documentation = "https://docs.rs/async-protocol"
 edition = "2018"
+exclude = [
+  "cargo/*",
+]
 keywords = ["protocol", "tcp", "udp", "connection", "encoding", "async"]
 license = "MIT"
 name = "async-protocol"
